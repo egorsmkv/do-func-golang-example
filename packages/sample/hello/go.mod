@@ -1,6 +1,6 @@
 module github.com/egorsmkv/do-functions-golang-example/packages/sample/hello
 
-go 1.20.0
+go 1.20
 
 require github.com/sirupsen/logrus v1.9.3
 
