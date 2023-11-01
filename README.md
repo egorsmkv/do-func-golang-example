@@ -5,7 +5,9 @@
 ```bash
 git clone https://github.com/egorsmkv/do-functions-golang-example
 
-cd do-functions-golang-example
+mv do-functions-golang-example golang-example
 
-doctl serverless deploy golang-example
+doctl serverless install
+
+doctl serverless deploy golang-example --verbose-build --remote-build
 ```
