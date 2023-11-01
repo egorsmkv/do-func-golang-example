@@ -16,9 +16,11 @@ jobs:
 
     - name: Set up Go
       uses: actions/setup-go@v4
-      working-directory: ./packages/sample/hello
       with:
         go-version: '1.21.0'
+        cache-dependency-path: |
+          ./packages/sample/hello/go.sum
+          # tools/go.sum
 
     - name: Test
       working-directory: ./packages/sample/hello
