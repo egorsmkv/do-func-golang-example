@@ -5,10 +5,10 @@ functions:
 - github:
     branch: master
     deploy_on_push: true
-    repo: digitalocean/sample-functions-golang-random
+    repo: egorsmkv/do-functions-golang-example
   name: go-api
   routes:
   - path: /
   source_dir: /
-name: go-random
+name: go-hello
 region: nyc

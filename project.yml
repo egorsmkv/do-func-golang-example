@@ -5,9 +5,8 @@ packages:
     environment: {}
     parameters: {}
     actions:
-      - name: random
+      - name: hello
         main: ''
         runtime: 'go:default'
         environment: {}
         parameters: {}
-
