@@ -10,14 +10,18 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    envs:
+      working-directory: ./packages/sample/hello
+
     steps:
     - uses: actions/checkout@v3
 
     - name: Set up Go
       uses: actions/setup-go@v4
+      working-directory: ${{env.working-directory}}
       with:
         go-version: '1.21.0'
 
     - name: Test
-      working-directory: ./packages/sample/hello
+      working-directory: ${{env.working-directory}}
       run: go test -v ./...
