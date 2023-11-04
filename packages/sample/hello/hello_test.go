@@ -1,6 +1,7 @@
 package main
 
 import (
+	"net/http"
 	"testing"
 )
 
@@ -11,11 +12,20 @@ func TestMain(t *testing.T) {
 	}
 
 	want := Response{
-		Body: "Hello, Yehor",
+		Body:       "Hello, Yehor",
+		StatusCode: http.StatusOK,
 	}
 
 	msg, err := Main(in)
-	if msg.Body != want.Body || err != nil {
-		t.Fatalf(`Main("Yehor") = %q, %v, want match for %#q, nil`, msg, err, want)
+	if err != nil {
+		t.Fatalf(`Main("Yehor"), error %v`, err)
+	}
+
+	if msg.Body != want.Body {
+		t.Fatalf(`Main("Yehor") = %s, wrong body, must be %s`, msg.Body, want.Body)
+	}
+
+	if msg.StatusCode != want.StatusCode {
+		t.Fatalf(`Main("Yehor"), status code is %d, wrong status code, must be %d`, msg.StatusCode, want.StatusCode)
 	}
 }

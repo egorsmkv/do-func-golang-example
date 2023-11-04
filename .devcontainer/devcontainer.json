@@ -56,6 +56,7 @@
                 "go.coverOnTestPackage": true,
                 "go.lintTool": "golangci-lint",
                 "go.lintOnSave": "package",
+                "go.diagnostic.vulncheck": "Imports",
                 "[go]": {
                     "editor.codeActionsOnSave": {
                         "source.organizeImports": true
@@ -63,8 +64,7 @@
                 },
                 "gopls": {
                     "usePlaceholders": false,
-                    "staticcheck": true,
-                    "vulncheck": "Imports"
+                    "staticcheck": true
                 },
                 "remote.extensionKind": {
                     "ms-azuretools.vscode-docker": "workspace"
