@@ -7,7 +7,7 @@ git clone https://github.com/egorsmkv/do-func-golang-example
 
 doctl serverless install
 
-doctl serverless deploy do-functions-golang-example --verbose-build --remote-build
+doctl serverless deploy do-func-golang-example --verbose-build --remote-build
 ```
 
 ## Development

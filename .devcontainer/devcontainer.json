@@ -1,5 +1,5 @@
 {
-    "name": "do-functions-golang-example",
+    "name": "do-func-golang-example",
     "dockerComposeFile": [
         "docker-compose.yml"
     ],
