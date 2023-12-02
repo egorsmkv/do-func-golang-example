@@ -12,6 +12,14 @@ doctl serverless deploy do-functions-golang-example --verbose-build --remote-bui
 
 ## Development
 
+### Lint
+
 ```bash
 golangci-lint run packages/sample/hello
+```
+
+### Test
+
+```bash
+gotestsum -- ./packages/sample/hello
 ```
