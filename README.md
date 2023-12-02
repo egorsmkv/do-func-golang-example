@@ -1,9 +1,9 @@
-# `do-functions-golang-example`
+# `do-func-golang-example`
 
 ## Install
 
 ```bash
-git clone https://github.com/egorsmkv/do-functions-golang-example
+git clone https://github.com/egorsmkv/do-func-golang-example
 
 doctl serverless install
 
