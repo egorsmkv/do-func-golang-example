@@ -27,14 +27,14 @@ func Main(in Request) (*Response, error) {
 	}).Info("A walrus appears")
 
 	// An example of returning an error
-	// if in.Name == "" {
-	// 	err := fmt.Errorf("no name provided")
+	if in.Name == "" {
+		err := fmt.Errorf("no name provided")
 
-	// 	return &Response{
-	// 		Body:       err.Error(),
-	// 		StatusCode: http.StatusBadRequest,
-	// 	}, err
-	// }
+		return &Response{
+			Body:       err.Error(),
+			StatusCode: http.StatusBadRequest,
+		}, err
+	}
 
 	// An example of returning a response
 	return &Response{
