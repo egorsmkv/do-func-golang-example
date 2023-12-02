@@ -5,7 +5,7 @@ functions:
 - github:
     branch: master
     deploy_on_push: true
-    repo: egorsmkv/do-functions-golang-example
+    repo: egorsmkv/do-func-golang-example
   name: go-api
   routes:
   - path: /
