@@ -26,6 +26,16 @@ func Main(in Request) (*Response, error) {
 		"animal": "walrus",
 	}).Info("A walrus appears")
 
+	// An example of returning an error
+	if in.Name == "" {
+		err := fmt.Errorf("no name provided")
+
+		return &Response{
+			Body:       err.Error(),
+			StatusCode: http.StatusBadRequest,
+		}, err
+	}
+
 	// An example of returning a response
 	return &Response{
 		Body:       fmt.Sprintf("Hello, %s", in.Name),
